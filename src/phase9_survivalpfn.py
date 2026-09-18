@@ -17,7 +17,8 @@ Run with the SurvivalPFN repo's own conda env (survivalpfn_cpu), NOT the project
 "biomarker" env: SurvivalPFN pins torch==2.5.1 and lacks scikit-survival, so this script
 only uses numpy/pandas/scipy helpers copied from phase8 (no sksurv import at all).
 
-Run: /home/jesus/miniconda3/envs/survivalpfn_cpu/bin/python src/phase9_survivalpfn.py
+Run (from the SurvivalPFN conda env, with SURVIVALPFN_DIR pointing at a checkout of SurvivalPFN):
+    SURVIVALPFN_DIR=/path/to/SurvivalPFN python src/phase9_survivalpfn.py
 """
 from __future__ import annotations
 
@@ -31,7 +32,8 @@ from scipy import stats as sps
 
 SRC = Path(__file__).resolve().parent
 sys.path.insert(0, str(SRC))
-sys.path.insert(0, "/home/jesus/SurvivalPFN")
+import os
+sys.path.insert(0, os.environ.get("SURVIVALPFN_DIR", str(SRC.parent.parent / "SurvivalPFN")))  # checkout of SurvivalPFN
 
 from data import load_cptac_luad_discovery, load_tcga_luad_replication, load_gse68465_replication  # noqa: E402
 from survival_stats import _logrank_components  # noqa: E402

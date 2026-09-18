@@ -54,6 +54,7 @@ env/            conda environment and pinned requirements
 
 ```bash
 conda env create -f env/environment.yml && conda activate biomarker
+pip install -e nullcal_pkg            # the null-calibration engine, installed from this repository
 python src/fetch_cptac_luad.py && python src/fetch_tcga_gdc.py && python src/fetch_gse68465.py
 python src/phase2_discovery.py          # naive screen vs permutation-calibrated null
 python src/phase3_replication.py        # cross-cohort directional replication
@@ -65,6 +66,13 @@ python src/audit_reproducibility.py     # regenerates the central counts from th
 `src/audit_reproducibility.py` re-derives the manuscript's central counts (the 121-gene panel and the
 91/1,080 HPA validation count) directly from the raw cohort pipelines; its output is in
 `logs/audit_reproducibility_20260814_final.log`.
+
+**Notes on the two foundation-model scripts.** `src/phase9_survivalpfn.py` needs a checkout of
+SurvivalPFN and its own conda environment (torch 2.5.1); point `SURVIVALPFN_DIR` at the checkout.
+`src/phase10_bulkrnabert_embeddings.py` needs two derived inputs that are not archived here: the
+Ensembl gene list shipped with the BulkRNABert checkpoint (`BULKRNABERT_ENSG_ORDER`) and an
+Ensembl-to-HGNC map for that list obtained from mygene.info (`ENSG_TO_SYMBOL_MAP`). The embeddings
+and every number that script produced are archived in `results/phase10_bulkrnabert_embeddings.*`.
 
 ## Citing
 

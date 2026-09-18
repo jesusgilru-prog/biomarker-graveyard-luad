@@ -66,7 +66,7 @@ def main():
     y2 = 11.3
     s = box(ax, (1.2, y2), 7.6, 1.15,
              "Genome-wide naive screen (11,484 genes) $\\times$ 3 role-swapped\n"
-             "discovery/replication configurations  --  Section 3.1", COL_SCREEN)
+             "discovery/replication configurations  --  Section 4.1", COL_SCREEN)
     for c in (c1, c2, c3):
         bottom_mid = c[0]
         arrow(ax, bottom_mid, (bottom_mid[0], y2 + 1.15))
@@ -90,7 +90,7 @@ def main():
     y4 = 7.15
     p = box(ax, (2.3, y4), 5.4, 1.15,
              "121-gene directional panel\n(significant + concordant direction\n"
-             "in all three cohorts simultaneously)  --  Section 3.2",
+             "in all three cohorts simultaneously)  --  Section 4.2",
              COL_PANEL, fontweight="bold", textcolor="white")
     arrow(ax, (n1[0][0], y3), (5.0, y4 + 1.15))
     arrow(ax, (n2[0][0], y3), (5.0, y4 + 1.15))
@@ -99,14 +99,14 @@ def main():
     y5 = 4.7
     bw5 = 2.9
     d1 = box(ax, (0.3, y5), bw5, 1.65,
-              "Panel definition\nsensitivity (§3.2)\nCox continuous, $p{<}0.01/0.10$:\n"
+              "Panel definition\nsensitivity (§4.2)\nCox continuous, $p{<}0.01/0.10$:\n"
               "excess persists,\n2.1--6.6$\\times$", COL_DOWN, fontsize=7.0)
     d2 = box(ax, (3.55, y5), bw5, 1.65,
-              "External validation (§3.3)\nHPA published corpus\n"
+              "External validation (§4.3)\nHPA published corpus\n"
               "91/1,080 concordant,\n"
               "1.54$\\times$ joint excess,\n$p=5.7{\\times}10^{-8}$", COL_DOWN, fontsize=7.0)
     d3 = box(ax, (6.8, y5), bw5, 1.65,
-              "Stage/age sensitivity\n(§3.5)\n120/121 direction-\n"
+              "Stage/age sensitivity\n(§4.5)\n120/121 direction-\n"
               "concordant after\nadjustment", COL_DOWN, fontsize=7.0)
     for d in (d1, d2, d3):
         arrow(ax, (d[0][0], y4), (d[0][0], y5 + 1.65))
@@ -114,7 +114,7 @@ def main():
     # Row 6: brief note (dashed, "open observation")
     y6 = 2.85
     note = box(ax, (2.3, y6), 5.4, 1.1,
-                "Section 3.4 (open observation, not used to qualify\n"
+                "Section 4.4 (open observation, not used to qualify\n"
                 "the results above): non-monotonic FDR survival\n"
                 "with cohort size -- investigated, unresolved",
                 "white", fontsize=6.8)

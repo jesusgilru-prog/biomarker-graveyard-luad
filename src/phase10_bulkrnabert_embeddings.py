@@ -34,9 +34,11 @@ phase8) and the SAME z-scoring convention (fit on train only):
       dimensionality as (c), zero real information) -- if (c) does not beat (d), the
       embedding is not adding anything a same-size noise vector wouldn't.
 
-Run: /home/jesus/miniconda3/envs/biomarker/bin/python src/phase10_bulkrnabert_embeddings.py
+Run: python src/phase10_bulkrnabert_embeddings.py
 """
 from __future__ import annotations
+
+import os
 
 import json
 import sys
@@ -149,9 +151,16 @@ def main():
     panel = compute_panel(X1, y1, X2, y2, X3, y3, candidate_genes)
     print(f"Panel: {len(panel)} genes", flush=True)
 
-    map_df = pd.read_csv("/tmp/claude-1000/-home-jesus/9090ab72-9425-421c-86c1-9a4a25079037/scratchpad/ensg_to_symbol_clean.csv")
+    # Two derived inputs are needed here and are NOT archived in this repository:
+    #   BULKRNABERT_ENSG_ORDER : text file, one Ensembl gene ID per line, in the exact order the
+    #                            checkpoint expects (the gene list distributed with the BulkRNABert
+    #                            checkpoint on Hugging Face, CKPT above);
+    #   ENSG_TO_SYMBOL_MAP     : CSV with columns "query" (Ensembl ID) and "symbol" (HGNC symbol),
+    #                            obtained by querying mygene.info for that same list.
+    # Both are set through environment variables; see README ("Phase 10 note").
+    map_df = pd.read_csv(os.environ["ENSG_TO_SYMBOL_MAP"])
     symbol_by_ensg = dict(zip(map_df["query"], map_df["symbol"]))
-    with open("/tmp/claude-1000/-home-jesus/9090ab72-9425-421c-86c1-9a4a25079037/scratchpad/bulkrnabert_ensg_order.txt") as f:
+    with open(os.environ["BULKRNABERT_ENSG_ORDER"]) as f:
         ensg_order = [line.strip() for line in f]
 
     print("Loading BulkRNABert (frozen, no fine-tuning)...", flush=True)

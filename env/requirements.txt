@@ -20,7 +20,7 @@ narwhals==2.24.0
 natsort==8.4.0
 ncls==0.0.70
 # Editable Git install with no remote (nullcal==0.1.0)
--e /home/jesus/biomarker_graveyard/nullcal_pkg
+-e ./nullcal_pkg
 numpy==2.4.6
 openpyxl==3.1.5
 packaging==26.2

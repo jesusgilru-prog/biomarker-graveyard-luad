@@ -32,7 +32,7 @@ and the (possibly censored) observed time must be positive and substantial for e
 if either check fails, something is wrong with the pseudo-observation code and the rest
 of the script's numbers should not be trusted.
 
-Run: /home/jesus/miniconda3/envs/biomarker/bin/python src/phase11_tabpfn_pseudo_rmst.py
+Run: python src/phase11_tabpfn_pseudo_rmst.py
 """
 from __future__ import annotations
 
