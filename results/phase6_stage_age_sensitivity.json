@@ -1,0 +1,26 @@
+{
+  "n_genes": 121,
+  "cptac": {
+    "n_samples": 106,
+    "n_genes_fit": 121,
+    "n_direction_concordant": 120,
+    "pct_direction_concordant": 99.2,
+    "n_still_nominally_significant_and_concordant": 74
+  },
+  "tcga": {
+    "n_samples": 490,
+    "n_genes_fit": 121,
+    "n_direction_concordant": 121,
+    "pct_direction_concordant": 100.0,
+    "n_still_nominally_significant_and_concordant": 103
+  },
+  "gse68465": {
+    "n_samples": 439,
+    "n_genes_fit": 121,
+    "n_direction_concordant": 121,
+    "pct_direction_concordant": 100.0,
+    "n_still_nominally_significant_and_concordant": 101
+  },
+  "triple_concordant_after_adjustment": 120,
+  "triple_concordant_and_significant_after_adjustment": 58
+}

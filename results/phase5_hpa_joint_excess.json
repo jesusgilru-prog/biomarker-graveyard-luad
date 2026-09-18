@@ -1,0 +1,9 @@
+{
+  "n_hpa_directional_genes": 1080,
+  "cptac_marginal": 185.0,
+  "gse68465_marginal": 345.0,
+  "observed_joint": 91.0,
+  "expected_under_independence": 59.1,
+  "fold_joint_excess": 1.54,
+  "hypergeometric_p": 5.651345267984407e-08
+}

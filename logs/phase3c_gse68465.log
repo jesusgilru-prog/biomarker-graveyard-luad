@@ -1,0 +1,36 @@
+Discovery=gse68465: naive hits = 1618
+  cptac: naive p<0.05 = 247, direction-concordant = 231
+  tcga: naive p<0.05 = 525, direction-concordant = 510
+Observed naive p + direction computed in 3.4s
+BOTH replication cohorts (cptac & tcga): naive p<0.05 (direction-blind) = 123, direction-concordant = 121
+
+Building empirical null via 1000 label permutations (preserves real gene-gene correlation structure)...
+  100/1000 null iterations, elapsed 50s
+  200/1000 null iterations, elapsed 99s
+  300/1000 null iterations, elapsed 149s
+  400/1000 null iterations, elapsed 198s
+  500/1000 null iterations, elapsed 248s
+  600/1000 null iterations, elapsed 297s
+  700/1000 null iterations, elapsed 347s
+  800/1000 null iterations, elapsed 397s
+  900/1000 null iterations, elapsed 448s
+  1000/1000 null iterations, elapsed 500s
+{
+  "discovery_cohort": "gse68465",
+  "replication_cohorts": [
+    "cptac",
+    "tcga"
+  ],
+  "n_naive_discovery_hits": 1618,
+  "old_naive_both_direction_blind": 123,
+  "old_naive_pct_direction_blind": 7.6,
+  "observed_both_direction_concordant": 121,
+  "observed_pct_direction_concordant": 7.5,
+  "empirical_null_mean": 1.021,
+  "empirical_null_std": 1.793,
+  "empirical_fold_enrichment": 118.51,
+  "empirical_p_value": 0.000999000999000999,
+  "n_null_iterations": 1000,
+  "random_state": 42,
+  "runtime_seconds": 499.8
+}

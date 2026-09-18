@@ -1,0 +1,65 @@
+Device: cuda:0
+Loading cohorts + panel...
+Panel: 121 genes
+Loading BulkRNABert (frozen, no fine-tuning)...
+Coverage: TCGA-LUAD 87.0%, CPTAC-LUAD 96.7% (of BulkRNABert's 19062-gene vocabulary)
+Embedding TCGA-LUAD...
+  embed batch 0-1/508
+  embed batch 20-21/508
+  embed batch 40-41/508
+  embed batch 60-61/508
+  embed batch 80-81/508
+  embed batch 100-101/508
+  embed batch 120-121/508
+  embed batch 140-141/508
+  embed batch 160-161/508
+  embed batch 180-181/508
+  embed batch 200-201/508
+  embed batch 220-221/508
+  embed batch 240-241/508
+  embed batch 260-261/508
+  embed batch 280-281/508
+  embed batch 300-301/508
+  embed batch 320-321/508
+  embed batch 340-341/508
+  embed batch 360-361/508
+  embed batch 380-381/508
+  embed batch 400-401/508
+  embed batch 420-421/508
+  embed batch 440-441/508
+  embed batch 460-461/508
+  embed batch 480-481/508
+  embed batch 500-501/508
+Embedding CPTAC-LUAD...
+  embed batch 0-1/106
+  embed batch 20-21/106
+  embed batch 40-41/106
+  embed batch 60-61/106
+  embed batch 80-81/106
+  embed batch 100-101/106
+  panel_only (baseline, cf. phase8 rsf_cptac=0.729): C-index=0.7124
+  embedding_only: C-index=0.5102
+  panel_plus_embedding: C-index=0.6714
+  panel_plus_random_noise[0]: C-index=0.7049
+  panel_plus_random_noise[1]: C-index=0.7343
+  panel_plus_random_noise[2]: C-index=0.7077
+  panel_plus_random_noise[3]: C-index=0.6858
+  panel_plus_random_noise[4]: C-index=0.7616
+  panel_plus_random_noise[5]: C-index=0.6749
+  panel_plus_random_noise[6]: C-index=0.6940
+  panel_plus_random_noise[7]: C-index=0.7220
+  panel_plus_random_noise[8]: C-index=0.6872
+  panel_plus_random_noise[9]: C-index=0.7001
+  panel_plus_random_noise[10]: C-index=0.6981
+  panel_plus_random_noise[11]: C-index=0.7514
+  panel_plus_random_noise[12]: C-index=0.7391
+  panel_plus_random_noise[13]: C-index=0.7664
+  panel_plus_random_noise[14]: C-index=0.6926
+  panel_plus_random_noise[15]: C-index=0.6954
+  panel_plus_random_noise[16]: C-index=0.6988
+  panel_plus_random_noise[17]: C-index=0.6824
+  panel_plus_random_noise[18]: C-index=0.7213
+  panel_plus_random_noise[19]: C-index=0.6940
+
+Written: /home/jesus/biomarker_graveyard/results/phase10_bulkrnabert_embeddings.json
+Total time: 678s

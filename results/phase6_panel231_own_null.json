@@ -1,0 +1,9 @@
+{
+  "universe": 11484,
+  "cptac_naive": 949,
+  "gse68465_naive": 1618,
+  "observed_231": 231,
+  "expected_under_independence": 133.71,
+  "fold": 1.73,
+  "hypergeometric_p": 8.202268389376663e-19
+}

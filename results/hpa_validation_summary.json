@@ -1,0 +1,20 @@
+{
+  "n_hpa_directional_genes_in_panel": 1080,
+  "cptac_naive_p05": 189,
+  "cptac_dir_concordant": 899,
+  "cptac_naive_and_concordant": 185,
+  "gse68465_naive_p05": 347,
+  "gse68465_dir_concordant": 916,
+  "gse68465_naive_and_concordant": 345,
+  "observed_both_naive_and_concordant": 91,
+  "empirical_null_mean": 0.666,
+  "empirical_null_std": 1.419,
+  "empirical_fold_enrichment": 136.64,
+  "empirical_p_value": 0.000999000999000999,
+  "n_null_iterations": 1000,
+  "random_state": 42,
+  "note": "TCGA excluded from this analysis: HPA's own prognostic calls are derived from TCGA, so testing them there would be circular.",
+  "cptac_survives_analytic_bh": 9,
+  "gse68465_survives_analytic_bh": 163,
+  "survives_analytic_bh_both_cohorts": 2
+}

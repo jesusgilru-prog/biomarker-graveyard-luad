@@ -1,0 +1,240 @@
+{
+  "panel_size": 121,
+  "n_null": 50,
+  "seed": 42,
+  "n_trees": 300,
+  "models": [
+    "rsf",
+    "extra_trees",
+    "gbsa",
+    "cw_gbsa",
+    "survival_tree",
+    "cox_ph",
+    "coxnet",
+    "ipc_ridge",
+    "fast_svm",
+    "fast_kernel_svm",
+    "minlip",
+    "coxnet_lifelines"
+  ],
+  "observed": {
+    "rsf_cptac": 0.7288251366120219,
+    "extra_trees_cptac": 0.7151639344262295,
+    "gbsa_cptac": 0.6844262295081968,
+    "cw_gbsa_cptac": 0.735655737704918,
+    "survival_tree_cptac": 0.6342213114754098,
+    "cox_ph_cptac": 0.7090163934426229,
+    "coxnet_cptac": 0.73224043715847,
+    "ipc_ridge_cptac": 0.43306010928961747,
+    "fast_svm_cptac": 0.6933060109289617,
+    "fast_kernel_svm_cptac": 0.45901639344262296,
+    "minlip_cptac": 0.7663934426229508,
+    "rsf_gse68465": 0.594894368855801,
+    "extra_trees_gse68465": 0.6363766780930521,
+    "gbsa_gse68465": 0.5888388879660531,
+    "cw_gbsa_gse68465": 0.6468189849141511,
+    "survival_tree_gse68465": 0.5017743616073451,
+    "cox_ph_gse68465": 0.6099575663309222,
+    "coxnet_gse68465": 0.6088249950921913,
+    "ipc_ridge_gse68465": 0.4364325516074961,
+    "fast_svm_gse68465": 0.6222799414083146,
+    "fast_kernel_svm_gse68465": 0.5,
+    "minlip_gse68465": 0.6490992283414627,
+    "coxnet_lifelines_cptac": 0.7493169398907104,
+    "coxnet_lifelines_gse68465": 0.6479666571027317
+  },
+  "null": {
+    "rsf_cptac": {
+      "null_mean": 0.6158743169398907,
+      "null_sd": 0.04846584836154138,
+      "null_min": 0.4726775956284153,
+      "null_max": 0.7158469945355191,
+      "empirical_p": 0.0196078431372549,
+      "n_valid": 50
+    },
+    "extra_trees_cptac": {
+      "null_mean": 0.6272540983606557,
+      "null_sd": 0.05163631738606252,
+      "null_min": 0.5109289617486339,
+      "null_max": 0.735655737704918,
+      "empirical_p": 0.0392156862745098,
+      "n_valid": 50
+    },
+    "gbsa_cptac": {
+      "null_mean": 0.5946106557377049,
+      "null_sd": 0.06640758334256251,
+      "null_min": 0.41598360655737704,
+      "null_max": 0.764344262295082,
+      "empirical_p": 0.0784313725490196,
+      "n_valid": 50
+    },
+    "cw_gbsa_cptac": {
+      "null_mean": 0.6507103825136612,
+      "null_sd": 0.043959736341138554,
+      "null_min": 0.5314207650273224,
+      "null_max": 0.7609289617486339,
+      "empirical_p": 0.0392156862745098,
+      "n_valid": 50
+    },
+    "survival_tree_cptac": {
+      "null_mean": 0.5314617486338797,
+      "null_sd": 0.05375525268304434,
+      "null_min": 0.4334016393442623,
+      "null_max": 0.6581284153005464,
+      "empirical_p": 0.0784313725490196,
+      "n_valid": 50
+    },
+    "cox_ph_cptac": {
+      "null_mean": 0.5742349726775956,
+      "null_sd": 0.0672135923391447,
+      "null_min": 0.4412568306010929,
+      "null_max": 0.7377049180327869,
+      "empirical_p": 0.058823529411764705,
+      "n_valid": 50
+    },
+    "coxnet_cptac": {
+      "null_mean": 0.5810109289617487,
+      "null_sd": 0.06531512058137431,
+      "null_min": 0.453551912568306,
+      "null_max": 0.7418032786885246,
+      "empirical_p": 0.0392156862745098,
+      "n_valid": 50
+    },
+    "ipc_ridge_cptac": {
+      "null_mean": 0.4658196721311475,
+      "null_sd": 0.06026370503829909,
+      "null_min": 0.3155737704918033,
+      "null_max": 0.6345628415300546,
+      "empirical_p": 0.6862745098039216,
+      "n_valid": 50
+    },
+    "fast_svm_cptac": {
+      "null_mean": 0.581584699453552,
+      "null_sd": 0.06754026517381886,
+      "null_min": 0.44672131147540983,
+      "null_max": 0.7219945355191257,
+      "empirical_p": 0.058823529411764705,
+      "n_valid": 50
+    },
+    "fast_kernel_svm_cptac": {
+      "null_mean": 0.4993920765027322,
+      "null_sd": 0.0673445409308196,
+      "null_min": 0.3524590163934426,
+      "null_max": 0.6468579234972678,
+      "empirical_p": 0.7058823529411765,
+      "n_valid": 50
+    },
+    "minlip_cptac": {
+      "null_mean": 0.6769125683060109,
+      "null_sd": 0.04378196843735597,
+      "null_min": 0.5846994535519126,
+      "null_max": 0.7814207650273224,
+      "empirical_p": 0.0392156862745098,
+      "n_valid": 50
+    },
+    "rsf_gse68465": {
+      "null_mean": 0.513381102671358,
+      "null_sd": 0.030070737688463873,
+      "null_min": 0.43819936273991633,
+      "null_max": 0.5935881366937981,
+      "empirical_p": 0.0196078431372549,
+      "n_valid": 50
+    },
+    "extra_trees_gse68465": {
+      "null_mean": 0.5316508358375742,
+      "null_sd": 0.0250925916489808,
+      "null_min": 0.45516527989610545,
+      "null_max": 0.5853883209253862,
+      "empirical_p": 0.0196078431372549,
+      "n_valid": 50
+    },
+    "gbsa_gse68465": {
+      "null_mean": 0.5046583410096495,
+      "null_sd": 0.027172016755309496,
+      "null_min": 0.43312544359040184,
+      "null_max": 0.5493725555337431,
+      "empirical_p": 0.0196078431372549,
+      "n_valid": 50
+    },
+    "cw_gbsa_gse68465": {
+      "null_mean": 0.5729837966808112,
+      "null_sd": 0.026590061606853992,
+      "null_min": 0.5093550384319173,
+      "null_max": 0.6243185696380302,
+      "empirical_p": 0.0196078431372549,
+      "n_valid": 50
+    },
+    "survival_tree_gse68465": {
+      "null_mean": 0.5016733362528503,
+      "null_sd": 0.010758562417379054,
+      "null_min": 0.47161776475740325,
+      "null_max": 0.5434756346174174,
+      "empirical_p": 0.3137254901960784,
+      "n_valid": 50
+    },
+    "cox_ph_gse68465": {
+      "null_mean": 0.5177055616798296,
+      "null_sd": 0.023944796449542498,
+      "null_min": 0.47327886924087526,
+      "null_max": 0.5748176560305643,
+      "empirical_p": 0.0196078431372549,
+      "n_valid": 50
+    },
+    "coxnet_gse68465": {
+      "null_mean": 0.5188024946769152,
+      "null_sd": 0.024538979550210373,
+      "null_min": 0.4761480497123269,
+      "null_max": 0.579529152383685,
+      "empirical_p": 0.0196078431372549,
+      "n_valid": 50
+    },
+    "ipc_ridge_gse68465": {
+      "null_mean": 0.4926911402727231,
+      "null_sd": 0.023131321631529745,
+      "null_min": 0.4279005149423899,
+      "null_max": 0.5371256852055994,
+      "empirical_p": 0.9803921568627451,
+      "n_valid": 50
+    },
+    "fast_svm_gse68465": {
+      "null_mean": 0.5181872819800366,
+      "null_sd": 0.023707188437619726,
+      "null_min": 0.4756044155177361,
+      "null_max": 0.5641261835369444,
+      "empirical_p": 0.0196078431372549,
+      "n_valid": 50
+    },
+    "fast_kernel_svm_gse68465": {
+      "null_mean": 0.5,
+      "null_sd": 0.0,
+      "null_min": 0.5,
+      "null_max": 0.5,
+      "empirical_p": 1.0,
+      "n_valid": 50
+    },
+    "minlip_gse68465": {
+      "null_mean": 0.5434487549266849,
+      "null_sd": 0.026831791454562378,
+      "null_min": 0.4910828891137253,
+      "null_max": 0.5936334395433472,
+      "empirical_p": 0.0196078431372549,
+      "n_valid": 50
+    },
+    "coxnet_lifelines_cptac": {
+      "null_mean": 0.6422264427562309,
+      "null_sd": 0.04555418103897202,
+      "null_min": 0.5157103825136612,
+      "null_max": 0.7602459016393442,
+      "empirical_p": 0.047619047619047616,
+      "n_valid": 41
+    },
+    "coxnet_lifelines_gse68465": {
+      "null_mean": 0.5841975557823562,
+      "null_sd": 0.025177783446019723,
+      "null_min": 0.5243804835324142,
+      "null_max": 0.6220383262107186,
+      "empirical_p": 0.023809523809523808,
+      "n_valid": 41
+    }
+  }
+}

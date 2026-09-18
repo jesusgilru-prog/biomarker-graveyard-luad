@@ -1,0 +1,49 @@
+Site mortality: {
+  "DFCI": {
+    "mortality_rate": 0.4268,
+    "n": 82
+  },
+  "HLM": {
+    "mortality_rate": 0.7595,
+    "n": 79
+  },
+  "MI": {
+    "mortality_rate": 0.5763,
+    "n": 177
+  },
+  "MSKCC": {
+    "mortality_rate": 0.375,
+    "n": 104
+  },
+  "mortality_range": [
+    0.375,
+    0.7595
+  ]
+}
+Full-panel Meff: {
+  "panel_size": 11484,
+  "cptac": {
+    "n_samples": 106,
+    "n_zero_variance_genes_dropped": 22,
+    "meff_cheverud_nyholt": 11133.9,
+    "meff_cheverud_nyholt_pct": 96.95,
+    "meff_galwey": 81.1,
+    "meff_galwey_pct": 0.71
+  },
+  "tcga": {
+    "n_samples": 508,
+    "n_zero_variance_genes_dropped": 18,
+    "meff_cheverud_nyholt": 11013.1,
+    "meff_cheverud_nyholt_pct": 95.9,
+    "meff_galwey": 254.8,
+    "meff_galwey_pct": 2.22
+  },
+  "gse68465": {
+    "n_samples": 442,
+    "n_zero_variance_genes_dropped": 0,
+    "meff_cheverud_nyholt": 11217.5,
+    "meff_cheverud_nyholt_pct": 97.68,
+    "meff_galwey": 299.1,
+    "meff_galwey_pct": 2.6
+  }
+}

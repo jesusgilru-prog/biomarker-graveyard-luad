@@ -1,0 +1,10 @@
+Shared gene panel: 11484 genes (OK)
+
+[Check 1] 3-cohort directional panel: 121 genes (expected 121) -> PASS
+[Check 2] Panel without TCGA (CPTAC+GSE68465 only): 231 genes (expected 231) -> PASS
+[Check 3] 3-cohort panel is an exact subset of the no-TCGA panel: PASS
+
+[Check 4] HPA directional genes in shared panel: 1080 (expected 1080) -> PASS
+[Check 5] HPA both-cohort naive+concordant: 91 (expected 91) -> PASS
+
+ALL CHECKS PASSED

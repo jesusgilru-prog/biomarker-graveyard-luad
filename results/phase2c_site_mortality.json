@@ -1,0 +1,22 @@
+{
+  "DFCI": {
+    "mortality_rate": 0.4268,
+    "n": 82
+  },
+  "HLM": {
+    "mortality_rate": 0.7595,
+    "n": 79
+  },
+  "MI": {
+    "mortality_rate": 0.5763,
+    "n": 177
+  },
+  "MSKCC": {
+    "mortality_rate": 0.375,
+    "n": 104
+  },
+  "mortality_range": [
+    0.375,
+    0.7595
+  ]
+}

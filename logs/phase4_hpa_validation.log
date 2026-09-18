@@ -1,0 +1,40 @@
+HPA LUAD claims with direction, in shared panel: 1080
+[cptac] naive p+direction: 0.3s
+[cptac] naive p<0.05: 189/1080, direction-concordant with HPA: 899/1080, naive+concordant: 185/1080, survives analytic BH-FDR (m=1080): 9/1080
+[gse68465] naive p+direction: 2.1s
+[gse68465] naive p<0.05: 347/1080, direction-concordant with HPA: 916/1080, naive+concordant: 345/1080, survives analytic BH-FDR (m=1080): 163/1080
+
+Both cohorts, naive+direction-concordant with HPA: 91/1080
+Both cohorts, survives analytic BH-FDR AND direction-concordant: 2/1080
+
+Building empirical null via 1000 label permutations...
+  100/1000, elapsed 34s
+  200/1000, elapsed 67s
+  300/1000, elapsed 101s
+  400/1000, elapsed 134s
+  500/1000, elapsed 168s
+  600/1000, elapsed 202s
+  700/1000, elapsed 236s
+  800/1000, elapsed 270s
+  900/1000, elapsed 303s
+  1000/1000, elapsed 336s
+{
+  "n_hpa_directional_genes_in_panel": 1080,
+  "cptac_naive_p05": 189,
+  "cptac_dir_concordant": 899,
+  "cptac_naive_and_concordant": 185,
+  "cptac_survives_empirical_bh": 9,
+  "gse68465_naive_p05": 347,
+  "gse68465_dir_concordant": 916,
+  "gse68465_naive_and_concordant": 345,
+  "gse68465_survives_empirical_bh": 163,
+  "observed_both_naive_and_concordant": 91,
+  "survives_bh_both_cohorts": 2,
+  "empirical_null_mean": 0.666,
+  "empirical_null_std": 1.419,
+  "empirical_fold_enrichment": 136.64,
+  "empirical_p_value": 0.000999000999000999,
+  "n_null_iterations": 1000,
+  "random_state": 42,
+  "note": "TCGA excluded from this analysis: HPA's own prognostic calls are derived from TCGA, so testing them there would be circular."
+}

@@ -1,0 +1,17 @@
+Computing per-gene stats for all cohorts (reused across all 4 analyses)...
+
+[1] Gene-resampling (hypergeometric) null...
+  cptac: observed=123, expected=42.14, fold=2.92x, p=4.897e-29, triple-check=121
+  tcga: observed=121, expected=44.25, fold=2.73x, p=3.276e-30, triple-check=121
+  gse68465: observed=121, expected=40.72, fold=2.97x, p=1.031e-31, triple-check=121
+
+[2] HPA joint-vs-marginal excess...
+  {'n_hpa_directional_genes': 1080, 'cptac_marginal': np.int64(185), 'gse68465_marginal': np.int64(345), 'observed_joint': np.int64(91), 'expected_under_independence': np.float64(59.1), 'fold_joint_excess': np.float64(1.54), 'hypergeometric_p': np.float64(5.651345267984407e-08)}
+
+[3] Panel effective dimensionality (Meff)...
+  {'panel_size': 121, 'cptac': {'n_samples': 106, 'n_zero_variance_genes_dropped': 0, 'meff_cheverud_nyholt': 102.09, 'meff_cheverud_nyholt_pct': np.float64(84.4), 'meff_galwey': 45.49, 'meff_galwey_pct': np.float64(37.6), 'pc1_variance_fraction': 0.39}, 'tcga': {'n_samples': 508, 'n_zero_variance_genes_dropped': 0, 'meff_cheverud_nyholt': 104.03, 'meff_cheverud_nyholt_pct': np.float64(86.0), 'meff_galwey': 57.66, 'meff_galwey_pct': np.float64(47.7), 'pc1_variance_fraction': 0.365}, 'gse68465': {'n_samples': 442, 'n_zero_variance_genes_dropped': 0, 'meff_cheverud_nyholt': 108.57, 'meff_cheverud_nyholt_pct': np.float64(89.7), 'meff_galwey': 69.52, 'meff_galwey_pct': np.float64(57.5), 'pc1_variance_fraction': 0.313}}
+
+[4] Stouffer meta-analysis baseline...
+  {'n_genes': 11484, 'n_naive_p05': 2999, 'n_survive_bh': 1324, 'pct_survive_bh': 11.53}
+
+All 4 analyses written to results/phase5_*.json

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nullcal"
+version = "0.1.0"
+description = "Null-signal calibration: distinguish real signal from artifact by measuring the null floor."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Jesus Gil Ruiz", email = "jesus.gil@universidadeuropea.es" }]
+keywords = ["statistics", "false-discovery", "permutation", "calibration", "reproducibility"]
+dependencies = ["numpy>=1.22", "scipy>=1.8"]
+
+[project.optional-dependencies]
+pandas = ["pandas>=1.4"]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,16 @@
+Precomputed all stats in 104.2s
+Original (log-rank, p<0.05): 121 genes (matches manuscript)
+
+[1] Cox continuous, p<0.05...
+  panel: 246, overlap with original 121: 76
+  enrichment: {'cptac': {'n_naive': 1062, 'n_others_concordant': 790, 'observed_overlap': 246, 'expected': 73.06, 'fold': 3.37, 'p': np.float64(3.0321001977382042e-74)}, 'tcga': {'n_naive': 2797, 'n_others_concordant': 351, 'observed_overlap': 246, 'expected': 85.49, 'fold': 2.88, 'p': np.float64(2.285683685004573e-75)}, 'gse68465': {'n_naive': 2026, 'n_others_concordant': 479, 'observed_overlap': 247, 'expected': 84.5, 'fold': 2.92, 'p': np.float64(2.7307979829145396e-67)}}
+
+[2] Log-rank, p<0.01...
+  panel: 20, overlap with original 121: 20
+  enrichment: {'cptac': {'n_naive': 252, 'n_others_concordant': 149, 'observed_overlap': 20, 'expected': 3.27, 'fold': 6.12, 'p': np.float64(7.984636791649073e-11)}, 'tcga': {'n_naive': 927, 'n_others_concordant': 40, 'observed_overlap': 20, 'expected': 3.23, 'fold': 6.19, 'p': np.float64(3.2882469047096107e-12)}, 'gse68465': {'n_naive': 610, 'n_others_concordant': 57, 'observed_overlap': 20, 'expected': 3.03, 'fold': 6.61, 'p': np.float64(4.478219081263783e-12)}}
+
+[2] Log-rank, p<0.1...
+  panel: 276, overlap with original 121: 121
+  enrichment: {'cptac': {'n_naive': 1653, 'n_others_concordant': 899, 'observed_overlap': 279, 'expected': 129.4, 'fold': 2.16, 'p': np.float64(8.796971532647464e-41)}, 'tcga': {'n_naive': 3136, 'n_others_concordant': 475, 'observed_overlap': 276, 'expected': 129.71, 'fold': 2.13, 'p': np.float64(4.78074695782199e-47)}, 'gse68465': {'n_naive': 2528, 'n_others_concordant': 609, 'observed_overlap': 279, 'expected': 134.06, 'fold': 2.08, 'p': np.float64(3.854363054980107e-41)}}
+
+Written to results/phase7_panel_definition_sensitivity.json

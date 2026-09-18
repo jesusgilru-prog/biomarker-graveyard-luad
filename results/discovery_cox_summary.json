@@ -1,0 +1,11 @@
+{
+  "statistic": "cox_score_chi2 (continuous, z-scored expression)",
+  "n_patients": 106,
+  "n_events": 24,
+  "n_candidate_genes": 11484,
+  "n_naive_hits_p05": 1062,
+  "n_survive_bh_fdr05": 0,
+  "n_survive_by_fdr05": 0,
+  "pct_naive_surviving_bh": 0.0,
+  "runtime_seconds": 10208.8
+}

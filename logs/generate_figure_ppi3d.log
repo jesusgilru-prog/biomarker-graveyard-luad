@@ -1,0 +1,4 @@
+Panel PPI graph: 121 nodes, 486 edges, 35 components, largest component 83 genes, 30 isolated genes
+Same-direction edge count: observed=469, permutation null mean=263.4, sd=19.7, b=0/2000, p=0.00050
+Written results/ppi_direction_concordance.json
+Written fig5_ppi_network_3d.pdf/.png

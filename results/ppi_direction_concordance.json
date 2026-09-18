@@ -1,0 +1,13 @@
+{
+  "n_nodes": 121,
+  "n_edges": 486,
+  "n_components": 35,
+  "largest_component_size": 83,
+  "n_isolated": 30,
+  "same_direction_edges_observed": 469,
+  "n_permutations": 2000,
+  "null_mean": 263.358,
+  "null_sd": 19.707633952354605,
+  "b": 0,
+  "empirical_p": 0.0004997501249375312
+}

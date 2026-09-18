@@ -1,0 +1,30 @@
+{
+  "panel_size": 121,
+  "cptac": {
+    "n_samples": 106,
+    "n_zero_variance_genes_dropped": 0,
+    "meff_cheverud_nyholt": 102.09,
+    "meff_cheverud_nyholt_pct": 84.4,
+    "meff_galwey": 45.49,
+    "meff_galwey_pct": 37.6,
+    "pc1_variance_fraction": 0.39
+  },
+  "tcga": {
+    "n_samples": 508,
+    "n_zero_variance_genes_dropped": 0,
+    "meff_cheverud_nyholt": 104.03,
+    "meff_cheverud_nyholt_pct": 86.0,
+    "meff_galwey": 57.66,
+    "meff_galwey_pct": 47.7,
+    "pc1_variance_fraction": 0.365
+  },
+  "gse68465": {
+    "n_samples": 442,
+    "n_zero_variance_genes_dropped": 0,
+    "meff_cheverud_nyholt": 108.57,
+    "meff_cheverud_nyholt_pct": 89.7,
+    "meff_galwey": 69.52,
+    "meff_galwey_pct": 57.5,
+    "pc1_variance_fraction": 0.313
+  }
+}

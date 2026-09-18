@@ -1,0 +1,19 @@
+{
+  "cohort": "CPTAC-LUAD (discovery)",
+  "n_patients": 106,
+  "n_events": 24,
+  "n_candidate_genes": 11484,
+  "n_naive_hits_p05": 949,
+  "n_escalated_to_high_res_permutation": 949,
+  "n_permutations_escalated": 20000,
+  "random_state": 42,
+  "n_survive_bh_fdr05": 0,
+  "n_survive_by_fdr05": 0,
+  "pct_naive_surviving_bh": 0.0,
+  "pct_naive_surviving_by": 0.0,
+  "runtime_seconds_stageA": 7150.9,
+  "runtime_seconds_stageB": 7147.8,
+  "stage_C_top_k_genes": 20,
+  "stage_C_n_permutations": 1000000,
+  "runtime_seconds_stageC": 7745.9
+}

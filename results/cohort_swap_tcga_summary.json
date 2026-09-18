@@ -1,0 +1,11 @@
+{
+  "discovery_cohort": "tcga",
+  "n_patients": 508,
+  "n_events": 183,
+  "n_candidate_genes": 11484,
+  "n_naive_hits_p05": 2200,
+  "n_survive_bh_fdr05": 131,
+  "n_survive_by_fdr05": 0,
+  "pct_naive_surviving_bh": 5.95,
+  "runtime_seconds": 18102.2
+}

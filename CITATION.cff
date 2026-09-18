@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the manuscript it accompanies."
+title: "The Biomarker Graveyard in Lung Adenocarcinoma: analysis code"
+authors:
+  - family-names: "Gil Ruiz"
+    given-names: "Jesús"
+    orcid: "https://orcid.org/0000-0003-0675-2038"
+    affiliation: "Universidad Europea de Madrid"
+  - family-names: "Rivera Torres"
+    given-names: "José"
+    affiliation: "Universidad Europea de Madrid"
+  - family-names: "Rodríguez Regadera"
+    given-names: "Diego Rubén"
+    affiliation: "Universidad Europea de Madrid"
+license: MIT

@@ -1,0 +1,11 @@
+{
+  "discovery_cohort": "gse68465",
+  "n_patients": 442,
+  "n_events": 236,
+  "n_candidate_genes": 11484,
+  "n_naive_hits_p05": 1618,
+  "n_survive_bh_fdr05": 2,
+  "n_survive_by_fdr05": 0,
+  "pct_naive_surviving_bh": 0.12,
+  "runtime_seconds": 17539.3
+}
