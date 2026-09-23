@@ -1,5 +1,5 @@
 """Sensitivity analysis requested by all three external reviewers: repeat the
-discovery-cohort screen with the continuous Cox score test (cox_score_chi2)
+discovery-cohort screen with the continuous-covariate log-rank score test (cox_score_chi2)
 instead of median-split log-rank, to check whether "0% survive BH-FDR" is a
 consequence of dichotomization throwing away power, or holds regardless of
 which reasonable statistic is used.
@@ -50,14 +50,17 @@ def main():
     X, y = load_cptac_luad_discovery()
     X = X.loc[panel]
     yarr = y[["os_time_days", "os_event"]].values
-    print(f"Cox sensitivity: n={X.shape[1]}, events={int(yarr[:,1].sum())}, genes={len(panel)}")
+    print(f"Continuous-score sensitivity: n={X.shape[1]}, events={int(yarr[:,1].sum())}, genes={len(panel)}")
 
     # standardize expression per gene (z-score) so the Cox coefficient/HR is
     # interpretable as "per 1 SD" -- does not affect the score test's p-value
     # (score test at beta=0 is invariant to linear rescaling of x), but keeps
     # HRs comparable across genes if reported later.
     Xvals = X.values
-    Xvals = (Xvals - Xvals.mean(axis=1, keepdims=True)) / Xvals.std(axis=1, keepdims=True)
+    sd = Xvals.std(axis=1, keepdims=True)
+    Xvals = np.divide(Xvals - Xvals.mean(axis=1, keepdims=True), sd,
+                      out=np.zeros_like(Xvals), where=sd != 0)
+    # Constant genes remain zero: statistic=0 and p=1 in the original universe.
 
     t0 = time.time()
     observed = np.array([cox_score_chi2(Xvals[j], yarr) for j in range(Xvals.shape[0])])
@@ -90,6 +93,8 @@ def main():
             combined_p[idx] = res_c.p_value[i]
         print(f"Stage C: {N_PERM_STAGE_C} perms x {len(topk_genes)} genes ({time.time()-t2:.1f}s)")
 
+    if not np.isfinite(combined_p).all():
+        raise ValueError("Non-finite p-values must not enter FDR correction")
     q_bh = benjamini_hochberg(combined_p)
     q_by = benjamini_yekutieli(combined_p)
     survives_bh = q_bh <= ALPHA
@@ -106,7 +111,7 @@ def main():
     df.to_csv(RESULTS / "discovery_cox_naive_vs_calibrated.csv", index=False)
 
     summary = {
-        "statistic": "cox_score_chi2 (continuous, z-scored expression)",
+        "statistic": "continuous-covariate log-rank score, hypergeometric tie variance (legacy API: cox_score_chi2)",
         "n_patients": int(X.shape[1]), "n_events": int(yarr[:, 1].sum()),
         "n_candidate_genes": len(panel), "n_naive_hits_p05": n_naive,
         "n_survive_bh_fdr05": n_bh, "n_survive_by_fdr05": n_by,

@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the manuscript it accompanies."
-title: "The Biomarker Graveyard in Lung Adenocarcinoma: analysis code"
+title: "Cross-cohort reproducibility of prognostic gene-expression associations in lung adenocarcinoma: analysis code"
 authors:
   - family-names: "Gil Ruiz"
     given-names: "Jesús"
@@ -13,3 +13,5 @@ authors:
     given-names: "Diego Rubén"
     affiliation: "Universidad Europea de Madrid"
 license: MIT
+version: 1.0.2
+date-released: 2026-09-23

@@ -1,0 +1,12 @@
+{
+  "source": "GDC REST API https://api.gdc.cancer.gov/cases, project TCGA-LUAD",
+  "queried_utc": "2026-09-23T07:29:57.241142Z",
+  "cohort_n": 508,
+  "matched_in_gdc": 508,
+  "missing_age": 10,
+  "missing_stage": 8,
+  "missing_both": 0,
+  "excluded_from_stage_age_adjustment": 18,
+  "cross_check_phase6_n_fit": 490,
+  "cross_check_ok": true
+}

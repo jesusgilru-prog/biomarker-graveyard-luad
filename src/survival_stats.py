@@ -92,18 +92,19 @@ def logrank_chi2(x: np.ndarray, y: np.ndarray) -> float:
 
 
 def cox_score_chi2(x: np.ndarray, y: np.ndarray) -> float:
-    """Cox proportional-hazards score (Rao) test statistic for a single
-    continuous covariate, evaluated at beta=0 -- closed-form, no iterative
-    model fit needed (that is what makes it cheap enough to permute).
+    """Continuous-covariate log-rank score with hypergeometric tie variance.
 
-    Standard Breslow-tie formula (e.g. Klein & Moeschberger 2003, sec 8.3):
-    at each distinct event time with d deaths, compare the sum of x among
-    those who died to its risk-set-weighted expectation, normalized by the
-    risk-set variance of x (with the same finite-population tie correction
-    used in the log-rank statistic). Unlike logrank_chi2, x enters directly
-    (no median dichotomization), so it retains full continuous information --
-    the standard "more powerful than dichotomizing" alternative reviewers
-    asked for as a sensitivity check.
+    The historical API name is retained for reproducibility. This is NOT
+    the Breslow-ties score statistic. At each event time, conditional on d
+    deaths in a risk set of size n, the null selects a uniform subset of d
+    subjects without replacement. Its expression sum has mean d*mean(x)
+    and variance d*(n-d)/(n-1)*Var(x), with population variance (ddof=0).
+    Summing observed-minus-expected scores and these variances yields U^2/V.
+    It is also the score statistic at beta=0 of the exact conditional
+    partial likelihood. "Exact" here describes the tie likelihood, not the
+    chi-square p-value approximation used by callers. Without tied deaths
+    it agrees with the Breslow score; with binary x it is the log-rank test.
+    Continuous expression enters directly, without median dichotomization.
     """
     time = y[:, 0]
     event = y[:, 1]

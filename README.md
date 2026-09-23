@@ -1,8 +1,8 @@
-# The Biomarker Graveyard in Lung Adenocarcinoma
+# Cross-cohort reproducibility of prognostic gene-expression associations in lung adenocarcinoma
 
 Analysis code and result files for the manuscript
 
-> **The Biomarker Graveyard in Lung Adenocarcinoma: A Reproducible Directional Survival Signal Across Classical and Foundation-Model Machine Learning**
+> **Cross-cohort reproducibility of prognostic gene-expression associations in lung adenocarcinoma**
 > Jesús Gil Ruiz, José Rivera Torres, Diego Rubén Rodríguez Regadera.
 
 We screened 11,484 genes for association with overall survival in lung adenocarcinoma across three
@@ -82,3 +82,21 @@ the submitted version is given in the manuscript's Data Availability statement.
 ## License
 
 MIT — see `LICENSE`.
+
+## v1.0.2 — corrected FDR in the continuous-covariate sensitivity
+
+In versions up to v1.0.1, `results/discovery_cox_naive_vs_calibrated.csv` carried non-finite
+q-values for all 11,484 genes. Twenty-two genes with constant expression produced NaN statistics
+when standardised, and the cumulative-minimum step of the BH/BY procedures propagated those NaNs
+to every gene. Comparing NaN with alpha returns `False`, so the saved survivor count was 0 as an
+artefact rather than as a result.
+
+`src/phase2_cox_sensitivity.py` now assigns constant genes a zero statistic and p=1, keeping the
+gene universe unchanged, and refuses to run the FDR correction on a non-finite p-value vector.
+Recomputed on the same permutation p-values, **three genes survive BH at alpha=0.05 (GOLT1B,
+ARNTL2, GAPDH) and none survive BY**; the nominal-hit count (1,062) and the universe (11,484) are
+unchanged. The median-split log-rank screen, which carries the manuscript's headline result, was
+never affected.
+
+The pre-repair file is kept as `results/discovery_cox_naive_vs_calibrated_PRE_NANFIX.csv.bak` for
+reference, and `src/audit_astra_r2.py` audits against it.
