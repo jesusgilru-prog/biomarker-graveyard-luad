@@ -66,7 +66,7 @@ pip install -e nullcal_pkg            # the null-calibration engine, installed f
 python src/fetch_cptac_luad.py && python src/fetch_tcga_gdc.py && python src/fetch_gse68465.py
 python src/phase2_discovery.py          # naive screen vs permutation-calibrated null
 python src/phase3_replication.py        # cross-cohort directional replication
-python src/phase4_hpa_validation.py     # external validation against the HPA corpus
+python src/phase4_hpa_validation.py     # published-candidate audit against the HPA corpus
 python src/phase8_ml_survival_panel.py  # classical machine-learning validation
 python src/audit_reproducibility.py     # regenerates the central counts from the raw loaders
 ```
