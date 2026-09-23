@@ -90,12 +90,12 @@ def fig2_three_nulls():
     ax.set_ylim(0, 400)
     ax.set_xticks(x)
     ax.set_xticklabels(labels, fontsize=8.5)
-    ax.set_ylabel("Genes reaching significance with\nconcordant direction in both replication cohorts")
+    ax.set_ylabel("Genes reaching significance with\nconcordant direction in both non-reference cohorts")
     for i, f_ in enumerate(folds):
         ax.annotate(f"{f_:.1f}$\\times$, $p<0.001$", xy=(x[i] + 0.18, observed[i]),
                     xytext=(0, 5), textcoords="offset points", ha="center", fontsize=8)
     ax.legend(fontsize=8, loc="upper left", bbox_to_anchor=(0.0, 0.88))
-    ax.set_title("Directional-replication panel vs. 3 independently\nconstructed empirical nulls",
+    ax.set_title("Jointly selected panel vs. three\nreference-specific empirical nulls",
                  fontsize=10, pad=10)
     fig.tight_layout()
     fig.savefig(FIGDIR / "fig2_three_nulls.pdf", bbox_inches="tight")
@@ -116,17 +116,17 @@ def fig3_hpa_null():
            label="Empirical null (mean $\\pm$ SD, 1,000 permutations)",
            color="#b0b0b0", edgecolor="black", linewidth=0.6)
     ax.bar([1], [observed], width=0.5,
-           label="Observed (HPA-published biomarkers)",
+           label="Observed (HPA-nominated candidates)",
            color="#c44e52", edgecolor="black", linewidth=0.6)
     ax.set_yscale("symlog", linthresh=1)
     ax.set_ylim(0, 200)
     ax.set_xticks([0, 1])
     ax.set_xticklabels(["Null", "Observed"])
-    ax.set_ylabel("Of 1,080 HPA-published LUAD genes:\nboth-cohort naive + direction-concordant")
+    ax.set_ylabel("Of 1,080 HPA-nominated LUAD genes:\nboth-cohort naive + direction-concordant")
     ax.set_ylim(0, 400)
     ax.annotate(f"{fold:.1f}$\\times$, $p<0.001$", xy=(1, observed),
                 xytext=(0, 6), textcoords="offset points", ha="center", fontsize=9)
-    ax.set_title("External validation: published biomarkers vs.\ntheir own empirical null",
+    ax.set_title("Assessment of HPA-nominated candidates",
                  fontsize=10)
     ax.legend(fontsize=8, loc="upper left", bbox_to_anchor=(0.0, 0.80))
     fig.tight_layout()

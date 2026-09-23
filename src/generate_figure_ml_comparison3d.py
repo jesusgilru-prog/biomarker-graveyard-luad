@@ -1,7 +1,7 @@
 """3D bar comparison of all 15 machine-learning survival models (12 classical, Section
-3.5, plus 3 foundation-model candidates, Section 3.6) across the two held-out cohorts.
+3.6, plus 3 foundation-model candidates, Section 3.7) across the two evaluation cohorts (excluded from fitting, used for gene selection).
 Requested for visual diversity alongside the 3D PPI network figure; also fills a real gap
--- the ML comparison in the text (Sections 3.5-3.6) previously had no accompanying figure.
+-- the ML comparison in the text (Sections 3.6-3.7) previously had no accompanying figure.
 Reads every number directly from the result JSON files (never hand-transcribed), so a
 change to any upstream script is reflected here automatically.
 
@@ -59,7 +59,7 @@ def main():
     for label, cptac_v, gse_v in foundation_entries:
         models.append(label)
         cptac_vals.append(cptac_v)
-        gse_vals.append(gse_v if gse_v is not None else np.nan)  # BulkRNABert: GSE68465 excluded (Sec. 3.6)
+        gse_vals.append(gse_v if gse_v is not None else np.nan)  # BulkRNABert: GSE68465 excluded (Sec. 3.7)
         is_foundation.append(True)
 
     n = len(models)
@@ -88,13 +88,14 @@ def main():
     ax.view_init(elev=28, azim=-48)
 
     from matplotlib.patches import Patch
-    legend_elems = [Patch(facecolor=COL_CLASSICAL, edgecolor="black", label="Classical ML (Sec. 3.5)"),
-                     Patch(facecolor=COL_FOUNDATION, edgecolor="black", label="Foundation models (Sec. 3.6)")]
+    legend_elems = [Patch(facecolor=COL_CLASSICAL, edgecolor="black", label="Classical survival models (§3.6; Suppl. S5)"),
+                     Patch(facecolor=COL_FOUNDATION, edgecolor="black", label="Foundation models (§3.7; Suppl. S6)")]
     ax.legend(handles=legend_elems, loc="upper left", fontsize=7.0, bbox_to_anchor=(0.0, 0.98))
-    ax.set_title("C-index across all 15 machine-learning models tested,\nboth held-out cohorts "
-                 "(BulkRNABert+panel: GSE68465 excluded, different assay platform)", fontsize=7.8)
+    ax.set_title("Exploratory C-index across 15 model configurations\n"
+                 "Evaluation cohorts excluded from fitting but used for gene selection\n"
+                 "BulkRNABert+panel: GSE68465 excluded (assay coverage)", fontsize=7.8)
 
-    fig.tight_layout()
+    fig.subplots_adjust(left=0.02, right=0.94, bottom=0.20, top=0.80)
     fig.savefig(FIGDIR / "fig6_ml_comparison_3d.pdf", dpi=300, bbox_inches="tight")
     fig.savefig(FIGDIR / "fig6_ml_comparison_3d.png", dpi=300, bbox_inches="tight")
     print(f"Written fig6_ml_comparison_3d.pdf/.png ({n} models)")

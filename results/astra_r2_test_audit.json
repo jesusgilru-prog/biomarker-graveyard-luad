@@ -4,7 +4,7 @@
   "implementation_score": 1.7244897959183676,
   "breslow_score_for_diagnostic_only": 1.508928571428572,
   "test_checks_passed": 35,
-  "original_source": "results/discovery_cox_naive_vs_calibrated.csv",
+  "original_source": "results/discovery_cox_naive_vs_calibrated_PRE_NANFIX.csv.bak",
   "original_sha256": "4b01b2701e75e511c0115731a39a9322e3d271dd208099360cb0de5702bd78c1",
   "original_constant_gene_nan_count": 22,
   "original_nan_bh_q_count": 11484,
@@ -57,5 +57,6 @@
   },
   "permutations_rerun": false,
   "repair": "p=1/statistic=0 for verified constant genes; recalculate BH/BY over the same 11484-gene universe using saved empirical p-values for all other genes.",
-  "main_logrank_results_changed": false
+  "main_logrank_results_changed": false,
+  "original_source_note": "Pre-repair file, archived. The live results CSV was replaced by the repaired version in v1.0.2."
 }

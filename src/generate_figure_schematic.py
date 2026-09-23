@@ -66,7 +66,7 @@ def main():
     y2 = 11.3
     s = box(ax, (1.2, y2), 7.6, 1.15,
              "Genome-wide naive screen (11,484 genes) $\\times$ 3 role-swapped\n"
-             "discovery/replication configurations  --  Section 4.1", COL_SCREEN)
+             "reference-cohort configurations  --  §3.1", COL_SCREEN)
     for c in (c1, c2, c3):
         bottom_mid = c[0]
         arrow(ax, bottom_mid, (bottom_mid[0], y2 + 1.15))
@@ -78,10 +78,10 @@ def main():
     # Row 3: two complementary nulls
     y3 = 9.15
     n1 = box(ax, (0.3, y3), 4.3, 1.15,
-              "Label-permutation null\n(destroys all cross-cohort signal)\n"
+              "Label-permutation null\n(permutes non-reference outcomes)\n"
               "89--188$\\times$, $p<0.001$", COL_NULL)
     n2 = box(ax, (5.4, y3), 4.3, 1.15,
-              "Gene-resampling null\n(hypergeometric, sharper test)\n"
+              "Gene-resampling null\n(hypergeometric overlap)\n"
               "2.7--3.0$\\times$, $p<10^{-28}$", COL_NULL)
     arrow(ax, top_mid_s, (2.45, y3 + 1.15))
     arrow(ax, top_mid_s, (7.55, y3 + 1.15))
@@ -89,8 +89,8 @@ def main():
     # Row 4: 121-gene panel
     y4 = 7.15
     p = box(ax, (2.3, y4), 5.4, 1.15,
-             "121-gene directional panel\n(significant + concordant direction\n"
-             "in all three cohorts simultaneously)  --  Section 4.2",
+             "121-gene jointly selected panel\n(nominal significance + concordant direction\n"
+             "in all three cohorts simultaneously)  --  §3.2",
              COL_PANEL, fontweight="bold", textcolor="white")
     arrow(ax, (n1[0][0], y3), (5.0, y4 + 1.15))
     arrow(ax, (n2[0][0], y3), (5.0, y4 + 1.15))
@@ -99,22 +99,23 @@ def main():
     y5 = 4.7
     bw5 = 2.9
     d1 = box(ax, (0.3, y5), bw5, 1.65,
-              "Panel definition\nsensitivity (§4.2)\nCox continuous, $p{<}0.01/0.10$:\n"
+              "Panel definition\nsensitivity (§3.2)\nContinuous score; log-rank\n$p{<}0.01/0.10$:\n"
               "excess persists,\n2.1--6.6$\\times$", COL_DOWN, fontsize=7.0)
     d2 = box(ax, (3.55, y5), bw5, 1.65,
-              "External validation (§4.3)\nHPA published corpus\n"
+              "HPA candidate assessment (§3.3)\nTCGA-derived HPA calls\nassessed in CPTAC + GSE68465\n"
               "91/1,080 concordant,\n"
               "1.54$\\times$ joint excess,\n$p=5.7{\\times}10^{-8}$", COL_DOWN, fontsize=7.0)
     d3 = box(ax, (6.8, y5), bw5, 1.65,
-              "Stage/age sensitivity\n(§4.5)\n120/121 direction-\n"
+              "Stage/age sensitivity\n(§3.5)\n120/121 direction-\n"
               "concordant after\nadjustment", COL_DOWN, fontsize=7.0)
-    for d in (d1, d2, d3):
-        arrow(ax, (d[0][0], y4), (d[0][0], y5 + 1.65))
+    for d in (d1, d3):
+        arrow(ax, (p[0][0], y4), (d[0][0], y5 + 1.65))
+    # HPA candidates were nominated separately, not derived from the panel.
 
     # Row 6: brief note (dashed, "open observation")
     y6 = 2.85
     note = box(ax, (2.3, y6), 5.4, 1.1,
-                "Section 4.4 (open observation, not used to qualify\n"
+                "§3.4 (open observation, not used to qualify\n"
                 "the results above): non-monotonic FDR survival\n"
                 "with cohort size -- investigated, unresolved",
                 "white", fontsize=6.8)
@@ -126,9 +127,9 @@ def main():
     # bottom: conclusion
     y7 = 0.9
     concl = box(ax, (0.9, y7), 8.2, 1.35,
-                 "Directional reproducibility across independently calibrated cohorts\n"
-                 "recovers biological signal that gene-by-gene FDR correction destroys\n"
-                 "almost entirely -- a triage principle, not a clinical biomarker panel",
+                 "Directional concordance across cohorts identifies signal that per-gene\n"
+                 "log-rank FDR correction does not retain in the smallest cohort -- a triage\n"
+                 "principle for prioritisation, not a clinical biomarker panel",
                  "#f9f4e8", fontsize=7.6, fontweight="bold")
     arrow(ax, (5.0, y6), (5.0, y7 + 1.35))
 
