@@ -1,0 +1,96 @@
+{
+  "original_panel_size": 121,
+  "cox_p05": {
+    "panel_size": 246,
+    "overlap_with_original": 76,
+    "jaccard": 0.261,
+    "enrichment": {
+      "cptac": {
+        "n_naive": 1062,
+        "n_others_concordant": 790,
+        "observed_overlap": 246,
+        "expected": 73.06,
+        "fold": 3.37,
+        "p": 3.0321001977382042e-74
+      },
+      "tcga": {
+        "n_naive": 2797,
+        "n_others_concordant": 351,
+        "observed_overlap": 246,
+        "expected": 85.49,
+        "fold": 2.88,
+        "p": 2.285683685004573e-75
+      },
+      "gse68465": {
+        "n_naive": 2026,
+        "n_others_concordant": 480,
+        "observed_overlap": 247,
+        "expected": 84.68,
+        "fold": 2.92,
+        "p": 4.720839132477708e-67
+      }
+    }
+  },
+  "logrank_p01": {
+    "panel_size": 20,
+    "overlap_with_original": 20,
+    "jaccard": 0.165,
+    "enrichment": {
+      "cptac": {
+        "n_naive": 253,
+        "n_others_concordant": 149,
+        "observed_overlap": 20,
+        "expected": 3.28,
+        "fold": 6.09,
+        "p": 8.575895696584072e-11
+      },
+      "tcga": {
+        "n_naive": 927,
+        "n_others_concordant": 41,
+        "observed_overlap": 20,
+        "expected": 3.31,
+        "fold": 6.04,
+        "p": 5.9372899940189385e-12
+      },
+      "gse68465": {
+        "n_naive": 610,
+        "n_others_concordant": 57,
+        "observed_overlap": 20,
+        "expected": 3.03,
+        "fold": 6.61,
+        "p": 4.478219081263783e-12
+      }
+    }
+  },
+  "logrank_p10": {
+    "panel_size": 276,
+    "overlap_with_original": 121,
+    "jaccard": 0.438,
+    "enrichment": {
+      "cptac": {
+        "n_naive": 1654,
+        "n_others_concordant": 899,
+        "observed_overlap": 278,
+        "expected": 129.48,
+        "fold": 2.15,
+        "p": 2.9915209403319824e-40
+      },
+      "tcga": {
+        "n_naive": 3136,
+        "n_others_concordant": 477,
+        "observed_overlap": 276,
+        "expected": 130.26,
+        "fold": 2.12,
+        "p": 1.4845490189289166e-46
+      },
+      "gse68465": {
+        "n_naive": 2528,
+        "n_others_concordant": 610,
+        "observed_overlap": 279,
+        "expected": 134.28,
+        "fold": 2.08,
+        "p": 5.642044120034766e-41
+      }
+    }
+  }
+}

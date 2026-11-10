@@ -1,0 +1,2 @@
+todas (score combinado): aristas=486 misma direccion=469 (96.5%) nulo media=263.4 sd=19.8 p=0.00020
+solo escore>0 o dscore>0: aristas=228 misma direccion=217 (95.2%) nulo media=123.6 sd=11.5 p=0.00020

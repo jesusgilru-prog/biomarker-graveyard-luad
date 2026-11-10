@@ -1,0 +1,32 @@
+{
+  "cptac": {
+    "universe": 11484,
+    "n_reference_naive": 950,
+    "n_others_concordant": 510,
+    "observed_naive_overlap": 122,
+    "expected_under_independence": 42.19,
+    "fold_over_gene_resampling_null": 2.89,
+    "hypergeometric_p": 2.1148264463780146e-28,
+    "triple_concordant_check": 121
+  },
+  "tcga": {
+    "universe": 11484,
+    "n_reference_naive": 2200,
+    "n_others_concordant": 232,
+    "observed_naive_overlap": 121,
+    "expected_under_independence": 44.44,
+    "fold_over_gene_resampling_null": 2.72,
+    "hypergeometric_p": 5.5948635922190574e-30,
+    "triple_concordant_check": 121
+  },
+  "gse68465": {
+    "universe": 11484,
+    "n_reference_naive": 1618,
+    "n_others_concordant": 290,
+    "observed_naive_overlap": 121,
+    "expected_under_independence": 40.86,
+    "fold_over_gene_resampling_null": 2.96,
+    "hypergeometric_p": 1.5344342215683445e-31,
+    "triple_concordant_check": 121
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "cptac_only": 527,
+  "tcga_only": 1499,
+  "gse_only": 968,
+  "cptac_tcga": 176,
+  "cptac_gse": 125,
+  "tcga_gse": 403,
+  "all_three_naive": 122,
+  "all_three_dir_concordant": 121,
+  "n_cptac": 950,
+  "n_tcga": 2200,
+  "n_gse": 1618
+}

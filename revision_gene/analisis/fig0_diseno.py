@@ -1,0 +1,20 @@
+import matplotlib; matplotlib.use('Agg'); import matplotlib.pyplot as plt
+from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
+plt.rcParams.update({'font.size':8,'font.family':'serif'})
+fig,ax=plt.subplots(figsize=(9.2,4.6)); ax.set_xlim(0,10); ax.set_ylim(0,5); ax.axis('off')
+def box(x,y,w,h,t,c,fs=7.6,bold=False):
+    ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle='round,pad=0.02,rounding_size=0.08',fc=c,ec='k',lw=.8))
+    ax.text(x+w/2,y+h/2,t,ha='center',va='center',fontsize=fs,fontweight='bold' if bold else 'normal',linespacing=1.3)
+def arr(a,b): ax.add_patch(FancyArrowPatch(a,b,arrowstyle='-|>',mutation_scale=9,lw=.9,color='k'))
+box(0.1,3.7,2.6,1.1,'Cohorts\nCPTAC-LUAD n=106 (24 deaths)\nTCGA-LUAD n=508\nGSE68465 n=442','#dbe6f5')
+box(0.1,2.0,2.6,1.2,'HPA Pathology Atlas\n1,507 directional LUAD calls\n(TCGA-derived)','#f5e6c8')
+box(3.3,2.7,2.6,1.6,'Gene-identity audit (Ensembl)\nMKKS excluded; CPTAC duplicate\nrows fixed; 427 not evaluable\n→ 1,067 evaluable calls','#e6d9f0',bold=False)
+box(6.5,3.7,3.3,1.1,'Frozen protocol (written before\nthe stratified analysis)\n13-gene proliferation metagene,\nno overlap with evaluated genes','#eaeaea')
+box(6.5,2.0,3.3,1.2,'Tested in CPTAC-LUAD and GSE68465\nonly (TCGA excluded: circular)\nreproduced = p<0.05 and HPA\ndirection in both cohorts','#eaeaea')
+box(0.1,0.15,2.9,1.2,'Stratify by |ρ| with metagene\nreproduction rate per quintile\nCochran–Armitage trend\nlabel-permutation null','#ffffff',bold=False)
+box(3.25,0.15,2.9,1.2,'Partial conjunction\nmax of oriented one-sided p\nBH and BY across genes','#ffffff')
+box(6.4,0.15,3.4,1.2,'Metagene contrast (stage + age)\nattenuation of log-HR; comparison with\nalveolar, lymphocyte and random modules','#ffffff')
+box(3.3,4.45,2.6,0.5,'Positive control: 121-gene panel\n(all cohorts informed selection)','#c8d9ef',fs=7)
+arr((2.7,4.2),(3.3,3.8)); arr((2.7,2.6),(3.3,3.1)); arr((5.9,3.5),(6.5,3.9)); arr((5.9,3.1),(6.5,2.7)); arr((8.1,3.7),(8.1,3.25))
+arr((1.5,2.0),(1.5,1.35)); arr((4.6,2.7),(4.6,1.35)); arr((8.1,2.0),(8.1,1.35))
+plt.savefig('fig/fig0_diseno.pdf',bbox_inches='tight'); plt.savefig('fig/fig0_diseno.png',dpi=200,bbox_inches='tight')

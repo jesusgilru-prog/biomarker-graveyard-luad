@@ -1,0 +1,19 @@
+{
+  "discovery_cohort": "tcga",
+  "replication_cohorts": [
+    "cptac",
+    "gse68465"
+  ],
+  "n_naive_discovery_hits": 2200,
+  "old_naive_both_direction_blind": 122,
+  "old_naive_pct_direction_blind": 5.5,
+  "observed_both_direction_concordant": 121,
+  "observed_pct_direction_concordant": 5.5,
+  "empirical_null_mean": 1.358,
+  "empirical_null_std": 2.219,
+  "empirical_fold_enrichment": 89.1,
+  "empirical_p_value": 0.000999000999000999,
+  "n_null_iterations": 1000,
+  "random_state": 42,
+  "runtime_seconds": 789.8
+}

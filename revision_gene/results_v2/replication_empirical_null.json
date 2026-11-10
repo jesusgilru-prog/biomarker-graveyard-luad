@@ -1,0 +1,16 @@
+{
+  "n_naive_discovery_hits": 950,
+  "old_naive_both_direction_blind": 122,
+  "old_naive_pct_direction_blind": 12.8,
+  "observed_both_direction_concordant": 121,
+  "observed_pct_direction_concordant": 12.7,
+  "naive_independence_expected": 2.38,
+  "naive_independence_fold": 50.9,
+  "empirical_null_mean": 0.65,
+  "empirical_null_std": 1.27,
+  "empirical_fold_enrichment": 187.6,
+  "empirical_p_value": 0.000999000999000999,
+  "n_null_iterations": 1000,
+  "random_state": 42,
+  "runtime_seconds": 2359.5
+}

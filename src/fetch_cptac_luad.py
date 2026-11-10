@@ -45,7 +45,13 @@ def main():
     surv.columns = ["case_id", "os_time_days", "os_event"]
 
     expr = pd.read_csv(RAW / "LUAD_tumor_RNA-Seq_Expr_WashU_FPKM.tsv.gz", sep="\t")
-    expr = expr.dropna(subset=["gene_name"]).drop_duplicates(subset="gene_name").set_index("gene_name")
+    # Duplicated symbols (399 in this release) map to distinct Ensembl IDs, often a near-silent retrocopy
+    # next to the real gene. Keep the row with the highest mean expression (v1 kept the FIRST row; see
+    # revision_gene_nov/analisis/PASO1_RESULTADO.md).
+    expr = expr.dropna(subset=["gene_name"]).copy()
+    expr["_m"] = expr.drop(columns=["gene_id", "gene_name"]).astype(float).mean(axis=1)
+    expr = expr.sort_values("_m", ascending=False).drop_duplicates(subset="gene_name").drop(columns="_m")
+    expr = expr.set_index("gene_name")
     expr = expr.drop(columns=["gene_id"])
     expr.columns = [c.replace("-T", "") for c in expr.columns]
 

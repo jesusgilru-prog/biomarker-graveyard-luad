@@ -1,0 +1,32 @@
+corpus evaluable: 1067 | excluidos por identidad: ['MKKS'] | metagen en corpus excluidos: 12
+estimador puntual (92 reproducidos): 0.2105
+boot 0 3
+boot 25 43
+boot 50 84
+boot 75 127
+boot 100 183
+boot 125 230
+boot 150 272
+boot 175 313
+alveolar 0.2698875425729622
+immune 0.03238981922975437
+genes candidatos sin acoplamiento con metagen: 8741 de 10404
+modulos nulos: mediana |rho| con reproducidos 0.205 (metagen: 0.504); |rho| con metagen medio 0.214
+{
+ "puntual": 0.21053537892106805,
+ "bootstrap_ic95": [
+  -0.13198044594876687,
+  0.4614838162354115
+ ],
+ "B": 200,
+ "modulo_alveolar": 0.2698875425729622,
+ "modulo_immune": 0.03238981922975437,
+ "nulo": {
+  "media": 0.02165198964559402,
+  "p2_5": -0.11942527464984137,
+  "p97_5": 0.16446563957716095,
+  "n": 60,
+  "rho_reproducidos": 0.20465344881339437,
+  "rho_metagen": 0.21430446496021546
+ }
+}

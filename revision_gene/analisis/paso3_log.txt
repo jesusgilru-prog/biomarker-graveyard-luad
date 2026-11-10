@@ -1,0 +1,10 @@
+corpus evaluable: 1067 | excluidos por identidad: ['MKKS'] | metagen en corpus excluidos: 12
+observado: reproducen en ambas 92 / 1067 (1s)
+perm hecho 44.45754313468933
+   quintil    n  absrho_min  absrho_max  repro    tasa  ic95_lo  ic95_hi  nulo_media  nulo_p975   p_emp
+0        1  214      0.0030      0.1333      1  0.0047   0.0005   0.0216      0.0006     0.0047  0.1119
+1        2  213      0.1338      0.2381     10  0.0469   0.0244   0.0817      0.0006     0.0047  0.0010
+2        3  213      0.2385      0.3403     10  0.0469   0.0244   0.0817      0.0006     0.0047  0.0010
+3        4  213      0.3405      0.5018     24  0.1127   0.0755   0.1603      0.0007     0.0094  0.0010
+4        5  214      0.5030      0.9383     47  0.2196   0.1682   0.2786      0.0007     0.0093  0.0010
+Cochran-Armitage deciles: z=8.350 p=6.84e-17

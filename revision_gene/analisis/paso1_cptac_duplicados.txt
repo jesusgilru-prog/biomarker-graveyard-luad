@@ -1,0 +1,9 @@
+simbolos con >1 fila en CPTAC crudo: 399 filas 2495
+duplicados donde la fila conservada (primera) tiene <1/5 de la expresion de la mejor: 96
+de ellos en el panel de 11.484: 15 de 58 duplicados en el panel
+genes HPA (de los 1080) afectados: 3 ['PSMA2', 'PSMA1', 'MRPS17']
+                                hpa_call  cptac_p_naive  gse68465_p_naive
+gene                                                                     
+PSMA2   potential prognostic unfavorable       0.196897          0.051731
+PSMA1   potential prognostic unfavorable       0.735834          0.246634
+MRPS17  potential prognostic unfavorable       0.522877          0.005410

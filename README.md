@@ -108,3 +108,11 @@ never affected.
 
 The pre-repair file is kept as `results/discovery_cox_naive_vs_calibrated_PRE_NANFIX.csv.bak` for
 reference, and `src/audit_astra_r2.py` audits against it.
+
+## Revision notes (10 November 2026) — pending release
+
+These notes document the state of the working tree after the revision for *Gene*; they are not part of the v1.0.4 archive.
+
+- **CPTAC-LUAD duplicate symbols.** `fetch_cptac_luad.py` previously kept the *first* row of each duplicated gene symbol, which for 96 symbols (15 in the 11,484-gene universe, including PSMA1, PSMA2, MRPS17) was a near-silent retrocopy. It now keeps the row with the highest mean expression. Results regenerated with the corrected matrix are in `revision_gene/results_v2/`; the 121-gene panel is unchanged, nominal CPTAC-LUAD hits go 949 → 950 and reproduced HPA calls 91 → 92.
+- **New analyses** (identity audit, stratification by coupling to a 13-gene proliferation metagene, partial conjunction, metagene contrast) are in `revision_gene/analisis/` with the protocol in `revision_gene/PROTOCOLO_CONGELADO.md`. They read `data/processed/cptac_luad_fpkm_v2.csv.gz` (regenerate with the corrected fetch script).
+- **Known gaps.** `fetch_tcga_gdc.py` requires `--project` and writes `_n{N}` files, whereas `src/data.py` reads the `_full` TCGA-LUAD files, which were produced by a chunked download that is not scripted here; reproducing them from the script is not verified. `results/phase9_gnn_panel.json` (graph model, 2 permutation nulls, p = 0.333) is published as run but is not used in the paper. `results/cohort_demographics_table1.json` and `src/cohort_demographics_table1.py` are now included.

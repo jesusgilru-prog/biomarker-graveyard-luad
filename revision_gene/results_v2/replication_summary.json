@@ -1,0 +1,20 @@
+{
+  "n_discovery_survivors_tested": 0,
+  "n_replicate_in_tcga": 0,
+  "n_replicate_in_gse68465": 0,
+  "n_replicate_in_both": 0,
+  "pct_replicate_in_both": 0.0,
+  "note": "0 genes survived BH-FDR calibration in the discovery cohort, so there is nothing to replicate by the primary criterion -- reported as 0/0, not skipped.",
+  "supplementary_naive_to_naive": {
+    "description": "Of the 949 naive (uncorrected p<0.05) discovery hits, how many are ALSO naively significant (p<0.05, uncorrected) in each replication cohort -- a weaker, non-calibrated check, reported for context.",
+    "n_naive_discovery_hits": 950,
+    "n_naive_replicate_tcga": 298,
+    "n_naive_replicate_gse68465": 247,
+    "n_naive_replicate_both": 122,
+    "n_naive_replicate_either": 423,
+    "pct_naive_replicate_tcga": 31.4,
+    "pct_naive_replicate_gse68465": 26.0,
+    "pct_naive_replicate_both": 12.8,
+    "expected_by_chance_alone_pct": 0.25
+  }
+}

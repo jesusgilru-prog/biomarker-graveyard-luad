@@ -1,0 +1,47 @@
+{
+  "CPTAC-LUAD": {
+    "n": 106,
+    "age_n": 106,
+    "age_median": 62.0,
+    "age_q1": 56.25,
+    "age_q3": 69.0,
+    "sex_n": 106,
+    "female_n": 35,
+    "female_pct": 33.0188679245283,
+    "stage_n": 106,
+    "late_n": 21,
+    "late_pct": 19.81132075471698
+  },
+  "TCGA-LUAD": {
+    "n": 508,
+    "age_n": 498,
+    "age_median": 66.0,
+    "age_q1": 59.0,
+    "age_q3": 73.0,
+    "sex_n": 508,
+    "female_n": 272,
+    "female_pct": 53.54330708661418,
+    "stage_n": 500,
+    "late_n": 108,
+    "late_pct": 21.6,
+    "missing_age": 10,
+    "missing_stage": 8,
+    "missing_both": 0,
+    "unrecognized_stage_strings": [
+      "None"
+    ]
+  },
+  "GSE68465": {
+    "n": 442,
+    "age_n": 442,
+    "age_median": 65.0,
+    "age_q1": 58.0,
+    "age_q3": 72.0,
+    "sex_n": 442,
+    "female_n": 219,
+    "female_pct": 49.547511312217196,
+    "stage_n": 439,
+    "late_n": 68,
+    "late_pct": 15.489749430523919
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "statistic": "continuous-covariate log-rank score, hypergeometric tie variance (legacy API: cox_score_chi2)",
+  "n_patients": 106,
+  "n_events": 24,
+  "n_candidate_genes": 11484,
+  "n_naive_hits_p05": 1062,
+  "n_survive_bh_fdr05": 3,
+  "n_survive_by_fdr05": 0,
+  "pct_naive_surviving_bh": 0.28,
+  "runtime_seconds": 730.7
+}
