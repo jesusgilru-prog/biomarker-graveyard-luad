@@ -10,7 +10,7 @@ Scripts and outputs for the analyses in the manuscript "External reproducibility
 | 5 | `paso5_conjuncion.py` | Partial-conjunction test (BH and BY) |
 | 6 | `paso6_controles.py` | Alveolar and lymphocyte modules; terciles; coupling computed in TCGA only |
 | 7 | `paso7_ppi_228.py` | STRING edges among the 228-gene panel |
-| 8 | `paso8_dependencia_centro.py`, `paso4c_magnitudes.py` | Gene-dependence-aware permutation reference for the trend statistic; analyses stratified by recruiting centre in GSE68465 (log-rank, permutation, Cox); SFTPB sensitivity |
+| 8 | `paso8_dependencia_centro.py`, `paso8b_submuestreo.py`, `paso4c_magnitudes.py` | Gene-dependence-aware permutation reference for the trend statistic; analyses stratified by recruiting centre in GSE68465 (log-rank, permutation, Cox); SFTPB sensitivity |
 | - | `fig_central.py`, `fig0_diseno.py` | Figures 0 and 2 |
 
 Main results (corrected CPTAC-LUAD matrix, evaluation in CPTAC-LUAD n=106 and GSE68465 n=442): 1,067 evaluable calls, 92 nominally significant with the HPA direction in both cohorts; reproduction by coupling quintile 1/214, 10/213, 10/213, 24/213, 47/214 (Cochran-Armitage z=8.35, p=6.8e-17, treating genes as independent); 0/1,067 pass the partial-conjunction test (best q=0.057); median attenuation of the log hazard ratio by the metagene 21% (95% bootstrap CI -13 to 46%). Machine-readable outputs: `paso3_quintiles.csv`, `paso4b_resultado.json`, `paso5_conjuncion.csv`, `paso6_controles.json`. `results_v2/` holds the regenerated main pipeline.
